@@ -1,0 +1,312 @@
+#root {
+  display: flex;
+  .navbar {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    button {
+      background-color: aliceblue;
+      margin: 20px;
+      border: none;
+      color: black;
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden scroll;
+  height: 100vh;
+  width: 100%;
+  .header {
+    width: 100%;
+    display: flex;
+    background-color: rgba(0,0,0, .5);
+    height: 10vh;
+    .title {
+      width: 100%;
+      padding: 20px 60px;
+      color: aliceblue;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .album {
+    padding: 40px;
+    background-color: rgba(0,0,0, .5);
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.01);
+    }
+    h2 {
+      color: aliceblue;
+    }
+    p {
+      color: aliceblue;
+    }
+  }
+}
+
+.artist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden scroll;
+  height: 100vh;
+  width: 100%;
+  .header {
+    width: 100%;
+    display: flex;
+    background-color: rgba(0,0,0, .5);
+    height: 10vh;
+    .title {
+      width: 100%;
+      padding: 20px 60px;
+      color: aliceblue;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .artist {
+      padding: 20px;
+      margin: 20px;
+      background-color: rgba(0,0,0, .5);
+      border-radius: 20px;
+      width: 200px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease-in-out;
+      height: 300px;
+      &:hover {
+        transform: scale(1.05);
+      }
+      cursor: pointer;
+      color: aliceblue; 
+      .artist-avatar {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .artist-detail {
+        display: none;
+      }
+      .artist-info {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden scroll;
+  height: 100vh;
+  width: 100%;
+  .header {
+    width: 100%;
+    display: flex;
+    background-color: rgba(0,0,0, .5);
+    height: 10vh;
+    .title {
+      width: 100%;
+      padding: 20px 60px;
+      color: aliceblue;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .genres {
+      padding: 20px;
+      margin: 20px;
+      background-color: rgba(0,0,0, .5);
+      border-radius: 20px;
+      width: 200px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease-in-out;
+      height: 300px;
+      &:hover {
+        transform: scale(1.05);
+      }
+      cursor: pointer;
+      color: aliceblue; 
+      .genres-info {
+        text-align: center;
+        .genres-name {
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0,0,0, .5);
+    width: 100%;
+    .current-page {
+      color: aliceblue;
+      font-size: 14px;
+      margin: 0 10px;
+
+      align-items: center;
+      display: flex;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: aliceblue;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:disabled {
+        color: gray;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 0px 12px;
+  border: none;
+  background-color: aliceblue;
+  justify-content: space-between;
+  align-self: center;
+  margin-right: 60px;
+  input {
+    border: none;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+
+.home {
+  .header {
+    align-items: center;
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-left: 20px;
+      border-radius: 50%;
+      border: 2px solid aliceblue;
+    }
+    .title {
+      padding: 20px 25px;
+    }
+  }
+}
+
+.button-go {
+  background-color: aliceblue;
+  border: none;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
+}
+
+
+.album-x-container {
+  padding: 40px;
+  h2 {
+    color: aliceblue;
+  }
+  p {
+    color: aliceblue;
+  }
+  .album-detail-x {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .album-popularity-x {
+    color: rgba(aliceblue, 0.5);
+  }
+  .track-container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    .album {
+      width: 100%;
+      .track-name-x {
+        margin-bottom: 20px;
+        margin-top: 0px;
+      }
+      audio {
+        width: 100%;
+      }
+    }
+  }
+}

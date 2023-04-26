@@ -1,0 +1,308 @@
+#root {
+  display: flex;
+}
+#root .navbar {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+#root .navbar button {
+  background-color: aliceblue;
+  margin: 20px;
+  border: none;
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+#root .navbar button:hover {
+  transform: scale(1.05);
+}
+
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden scroll;
+  height: 100vh;
+  width: 100%;
+}
+.album-container .header {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10vh;
+}
+.album-container .header .title {
+  width: 100%;
+  padding: 20px 60px;
+  color: aliceblue;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.album-container .album {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.album-container .album:hover {
+  transform: scale(1.01);
+}
+.album-container .album h2 {
+  color: aliceblue;
+}
+.album-container .album p {
+  color: aliceblue;
+}
+
+.artist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden scroll;
+  height: 100vh;
+  width: 100%;
+}
+.artist-container .header {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10vh;
+}
+.artist-container .header .title {
+  width: 100%;
+  padding: 20px 60px;
+  color: aliceblue;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.artist-container .artists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.artist-container .artists .artist {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  height: 300px;
+  cursor: pointer;
+  color: aliceblue;
+}
+.artist-container .artists .artist:hover {
+  transform: scale(1.05);
+}
+.artist-container .artists .artist .artist-avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+.artist-container .artists .artist .artist-avatar img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.artist-container .artists .artist .artist-detail {
+  display: none;
+}
+.artist-container .artists .artist .artist-info {
+  text-align: center;
+}
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden scroll;
+  height: 100vh;
+  width: 100%;
+}
+.genres-container .header {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10vh;
+}
+.genres-container .header .title {
+  width: 100%;
+  padding: 20px 60px;
+  color: aliceblue;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.genres-container .genres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.genres-container .genres .genres {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  height: 300px;
+  cursor: pointer;
+  color: aliceblue;
+}
+.genres-container .genres .genres:hover {
+  transform: scale(1.05);
+}
+.genres-container .genres .genres .genres-info {
+  text-align: center;
+}
+.genres-container .genres .genres .genres-info .genres-name {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.footer .pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.footer .pagination .current-page {
+  color: aliceblue;
+  font-size: 14px;
+  margin: 0 10px;
+  align-items: center;
+  display: flex;
+}
+.footer .pagination button {
+  background-color: transparent;
+  border: none;
+  color: aliceblue;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.footer .pagination button:hover {
+  transform: scale(1.1);
+}
+.footer .pagination button:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 0px 12px;
+  border: none;
+  background-color: aliceblue;
+  justify-content: space-between;
+  align-self: center;
+  margin-right: 60px;
+}
+.search-container input {
+  border: none;
+  background-color: transparent;
+}
+.search-container input:focus {
+  outline: none;
+}
+
+.home .header {
+  align-items: center;
+}
+.home .header .logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 2px solid aliceblue;
+}
+.home .header .title {
+  padding: 20px 25px;
+}
+
+.button-go {
+  background-color: aliceblue;
+  border: none;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.button-go:hover {
+  transform: scale(1.05);
+}
+.button-go:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.album-x-container {
+  padding: 40px;
+}
+.album-x-container h2 {
+  color: aliceblue;
+}
+.album-x-container p {
+  color: aliceblue;
+}
+.album-x-container .album-detail-x {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.album-x-container .album-popularity-x {
+  color: rgba(240, 248, 255, 0.5);
+}
+.album-x-container .track-container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.album-x-container .track-container .album {
+  width: 100%;
+}
+.album-x-container .track-container .album .track-name-x {
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+.album-x-container .track-container .album audio {
+  width: 100%;
+}/*# sourceMappingURL=App.css.map */
